@@ -30,7 +30,7 @@ void read_command(char* command, char** argv) {
 			}
 			argv[wordIndex] = malloc(wordLen+1);
 			memcpy(argv[wordIndex], str+wordStart, wordLen);
-			argv[wordIndex][wordLen+1] = '\0';
+			argv[wordIndex][wordLen] = '\0';
 			wordIndex++;
 			if (str[i] == '\n' || str[i] == '\0') break;
 			
